@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,6 +10,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent implements AfterViewInit {
   title = 'portfolio-app';
+  activeSite: number = 0;
+  siteIndexes: number[] = [0,1,2,3,4]
+
+  constructor() {}
 
   ngAfterViewInit(): void {
     let worksContainer = document.querySelector('.works');
@@ -29,5 +33,31 @@ export class AppComponent implements AfterViewInit {
         behavior: "smooth",
       })
     });
+
+    document.addEventListener('scroll', () => {
+      this.keepTrack();
+    })
+  }
+
+  keepTrack() {
+    let sectionOne: any = document.querySelector(".main-container");
+    let sectionTwo: any = document.querySelector(".algomem-container");
+    let sectionThree: any = document.querySelector(".todo-maker-container");
+    let sectionFour: any = document.querySelector(".robotic-container");
+    console.log(sectionOne?.offsetTop, sectionTwo?.offsetTop, sectionThree?.offsetTop, sectionFour?.offsetTop)
+    if(window.pageYOffset < sectionTwo?.offsetTop - 100) { 
+      this.activeSite = 0;
+    }
+    console.log(window.pageYOffset)
+    if(window.pageYOffset > sectionTwo?.offsetTop - 100 && window.pageYOffset < sectionThree?.offsetTop - 100) {
+      this.activeSite = 1;
+    }
+    if(window.pageYOffset > sectionThree?.offsetTop - 100 && window.pageYOffset < sectionFour?.offsetTop - 100) {
+      this.activeSite = 2;
+    }
+    if(window.pageYOffset > sectionFour?.offsetTop - 100) {
+      this.activeSite = 3;
+      console.log("bingo")
+    }
   }
 }
