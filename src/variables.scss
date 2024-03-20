@@ -18,6 +18,11 @@ $pale-green: #8FA998;
     src: url(./assets//fonts/Bai_Jamjuree//BaiJamjuree-ExtraLight.ttf);
 }
 
+@font-face {
+    font-family: thirdFontBold;
+    src: url(./assets//fonts/Bai_Jamjuree//BaiJamjuree-Regular.ttf);
+}
+
 @mixin center-right {
     display: flex;
     align-items: center;
