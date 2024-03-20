@@ -26,6 +26,9 @@
                 border-radius: 50%;
                 background-color: $secondary;
             }
+            .active {
+                background-color: rgba(201, 242, 153, 0.25);
+            }
         }
 
         .name-container {
@@ -53,8 +56,7 @@
     .works-container {
         padding-left: 10rem;
         .algomem-container {
-            height: 100vh;
-            margin-bottom: 9rem;
+            height: 110vh;
             .works-header {
                     font-family: primaryFont;
                     font-size: 10rem;
@@ -137,7 +139,9 @@
             }
         }
         .todo-maker-container {
-            height: 100vh;
+            height: 110vh;
+            display: flex;
+            align-items: center;
             .todo-maker {
                 max-width: 95%;
                 clip-path: polygon(
@@ -221,7 +225,7 @@
             }
         }
         .robotic-container {
-            height: 100vh;
+            height: 110vh;
             .robotic {
                 margin-top: 4rem;
                 max-width: 95%;
