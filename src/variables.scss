@@ -1,0 +1,41 @@
+$primary: #4F345A;
+$secondary: rgb(201, 242, 153);
+$pale-purple: #5D4E6D;
+$pale-green: #8FA998;
+
+@font-face {
+    font-family: PrimaryFont;
+    src: url(./assets//fonts//Keania_One/KeaniaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: secondaryFont;
+    src: url(./assets//fonts//Julius_Sans_One/JuliusSansOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: thirdFont;
+    src: url(./assets//fonts/Bai_Jamjuree//BaiJamjuree-ExtraLight.ttf);
+}
+
+@mixin center-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+@mixin center-left {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
