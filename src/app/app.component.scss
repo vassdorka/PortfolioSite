@@ -1,0 +1,165 @@
+@import '../variables.scss';
+
+.app-container {
+    background-color: $primary;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+    .main-container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+        .sidebar {
+            position: fixed;
+            top: 45%;
+            left: 3%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            div {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $secondary;
+            }
+        }
+
+        .name-container {
+            height: 100%;
+            @include center-right;
+            text-align: end;
+            width: 20%;
+            font-family: thirdFont;
+            font-size: 2.75rem;
+            color: $pale-green;
+        }
+
+        .portfolio-container {
+            height: 100%;
+            @include center-left;
+            text-align: start;
+            width: 80%;
+            font-family: primaryFont;
+            font-size: 13rem;
+            color: $secondary;
+            text-transform: uppercase;
+        }
+    }
+
+    .works-container {
+        height: 200vh;
+        padding-left: 10rem;
+        .works-header {
+        @include row;
+            align-items: center;
+            font-family: primaryFont;
+            font-size: 10rem;
+            color: $secondary;
+        }
+        .algo-div {
+            border-radius: 5px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            background-size: cover;
+            height: 150px;
+            min-width: 305px;
+            margin-right: 1rem;
+            box-shadow: 0 4px 10px 1px rgba(2, 2, 2, 0.25);
+        }
+        .algomem-intro {
+            @include column;
+            margin-top: 1rem;
+            background-color: rgba(201, 242, 153, 0.1);
+            box-shadow: 0 4px 10px 1px rgba(2, 2, 2, 0.25);
+            border-radius: 10px;
+            max-width: 95%;
+            padding: 2rem 0;
+            .row {
+                @include row;
+                .description {
+                    @include column;
+                    width: 70%;
+                    text-align: end;
+                    color: $secondary;
+                    text-transform: uppercase;
+                    margin-right: 2rem;
+                    align-items: end;
+                    .project-name {
+                        font-size: 3rem;
+                        font-family: thirdFont;
+                        margin-bottom: 2.5rem;
+                    }
+                    .small-text{
+                        font-size: 0.6rem;
+                        font-family: thirdFont;
+                        width: 40%;
+                    }
+                }
+                .algomem-0 {
+                    background-image: url(../assets/videos/algomem_home.gif);
+                    width: 650px;
+                    height: 250px;
+                    margin-right: 3rem;
+                    box-shadow: 0 4px 20px 1px rgba(201, 242, 153, 0.5);
+                }
+            }
+            .works {
+                @include row;
+                padding-top: 3rem;
+                overflow: hidden;
+                position: relative;
+                margin-right: 3rem;
+                margin-left: 3rem;
+                z-index: 0;
+                .algomem-1 {
+                    background-image: url(../assets/videos/algomem-1.gif);
+                }
+                .algomem-2 {
+                    background-image: url(../assets/videos/algomem-2.gif);
+                }
+                .algomem-3 {
+                    background-image: url(../assets/videos/algomem-3.gif);
+                }
+                .algomem-4 {
+                    background-image: url(../assets/videos/algomem-4.gif);
+                }
+                .algomem-5 {
+                    background-image: url(../assets/videos/algomem-5.gif);
+                }
+                .algomem-6 {
+                    background-image: url(../assets/videos/algomem-6.gif);
+                }
+            }
+        }
+        .todo-maker-container {
+            max-width: 95%;
+            margin-top: 9rem;
+            clip-path: polygon(
+                0% 49.99%,
+                0% 0%,
+                100% 0%,
+                100% 100%,
+                40% 100%,
+                40% 83.33%, 
+                26.7% 83.33%,
+                26.7% 66.66%,
+                13.4% 66.66%,
+                13.4% 49.99%);
+            background-color: $secondary;
+            height: 600px;
+            border-radius: 10px 10px 10px 0;
+        }
+    }
+    .about-container {
+        height: 100vh;
+        display: flex;
+        font-family: primaryFont;
+        font-size: 10rem;
+        color: $secondary;
+        padding-left: 10rem;
+    }
+}
