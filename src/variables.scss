@@ -35,6 +35,12 @@ $pale-green: #8FA998;
     justify-content: start;
 }
 
+@mixin center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @mixin row {
     display: flex;
     flex-direction: row;
