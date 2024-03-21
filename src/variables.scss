@@ -41,6 +41,11 @@ $pale-green: #8FA998;
     justify-content: center;
 }
 
+@mixin center-horizontally {
+    display: flex;
+    justify-content: center;
+}
+
 @mixin row {
     display: flex;
     flex-direction: row;
@@ -50,3 +55,4 @@ $pale-green: #8FA998;
     display: flex;
     flex-direction: column;
 }
+
