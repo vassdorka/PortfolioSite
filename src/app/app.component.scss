@@ -306,7 +306,7 @@
             height: 100vh;
             @include center-horizontally;
             .robotic {
-                max-width: 65%;
+                width: 65%;
                 height: 70%;
                 @include row;
                 background: linear-gradient(to left, $secondary, $primary);
@@ -323,7 +323,7 @@
                 }
                 .robotic-desc {
                     width: 12%;
-                    font-size: 0.6rem;
+                    font-size: 0.85rem;
                     text-transform: none;
                     padding-bottom: 1rem;
                 }
@@ -380,18 +380,19 @@
             }
         }
         .about {
-            @include row;
-            width: 80%;
+            @include column;
             height: 100%;
-            .column {
-                @include column;
-                justify-content: center;
-                height: 100%;
-                width: 60%;
-                text-transform: uppercase;
-                color: $pale-green;
-                font-family: thirdFont;
-                font-size: 14px;
+            width: 40%;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            color: $pale-green;
+            font-family: thirdFont;
+            font-size: 14px;
+            .highlighted {
+                font-size: 16px;
+                color: $secondary;
+                font-family: thirdFontBold;
+            }
                 .contacts, .social {
                     @include column;
                     margin-bottom: 2rem;
@@ -453,11 +454,6 @@
                         }
                     }
                 }
-            }
-            .column:last-of-type {
-                width: 40%;
-                justify-content: flex-start;
-            }
         }
     }
 }
