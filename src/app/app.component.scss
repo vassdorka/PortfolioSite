@@ -468,3 +468,80 @@
     0%   {transform: scaleX(0);}
     100% {transform: scaleX(1)};
 }
+
+@media only screen and (max-width: 400px) {
+    .main-container {
+        .sidebar {
+            gap: 5px !important;
+            div {
+                width: 8px !important;
+                height: 8px !important;
+            }
+        }
+        .name-container {
+            font-size: 0.8rem !important;
+            width: 15% !important;
+        }
+        .portfolio-container {
+            p {
+                font-size: 3.5rem !important;
+                width: 85% !important;
+                @include center-center;
+            }
+        }
+    }
+    .algomem-container {
+        .algomem-intro {
+            width: 85% !important;
+            height: 90% !important;
+            .row {
+                flex-direction: column !important;
+                padding: 0.5rem !important;
+                height: 50% !important;
+                justify-content: flex-end;
+                .description {
+                    height: 60% !important;
+                    align-items: center !important;
+                    text-align: center !important;
+                    margin-right: 0 !important;
+                    .project-name {
+                        font-size: 1.75rem !important;
+                        margin-bottom: 1.5rem !important;
+                    }
+                    width: 100% !important;
+                }
+                .algo-div {
+                    margin-right: 0 !important;
+                }
+                .algomem-0 {
+                    margin-top: 2rem;
+                    width: 70% !important;
+                    height: 30% !important;
+                    opacity: 1 !important;
+                }
+            }
+            .works {
+                height: 50% !important;
+                justify-content: center !important;
+                .next, .back {
+                    display: none !important;
+                    width: 0 !important;
+                }
+                .gifs {
+                    width: 100% !important;
+                    display: grid !important;
+                    grid-template-columns: 45% 45%;
+                    grid-template-rows: 33.3% 33.3% 33.3%;
+                    justify-content: center !important;
+                    align-items: center !important;
+                    column-gap: 5%;
+                    .algo-div {
+                        height: 75%  !important;
+                        width: 100%  !important;
+                        margin-right: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
