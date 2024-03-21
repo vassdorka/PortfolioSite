@@ -351,7 +351,7 @@
                         @include center-center;
                         border-radius: 10px;
                         width: 100%;
-                        height: 100%;
+                        height: 90%;
                         background-size: cover;
                         box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.25);
                         padding: 0;
@@ -624,6 +624,7 @@
         .robotic {
             width: 85% !important; 
             height: 65% !important;
+            box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.25);
             flex-direction: column !important;
             background: linear-gradient($primary, $secondary) !important;
             .robotic-title {
@@ -686,5 +687,30 @@
                 height: 36px !important;
             }
         }
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .algomem-container {
+        height: 80vh !important;
+        .algomem-intro {
+            width: 50% !important;
+            height: 70% !important;
+        }
+    }
+    .todo-maker-container {
+        height: 80vh !important;
+        .todo-maker {
+            width: 50% !important;
+        }
+    }
+    .robotic-container {
+        height: 80vh !important;
+        .robotic {
+            width: 50% !important;
+        }
+    }
+    .about-container {
+        height: 85vh !important;
     }
 }
