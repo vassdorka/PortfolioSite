@@ -639,11 +639,13 @@
                 }
             }
             .robotic-desc {
-                width: 100% !important;
+                width: 90% !important;
                 font-size: 0.75rem !important;
                 margin-left: 0 !important;
                 height: 25%;
-                padding: 0 1rem !important;
+                padding-left: 1rem !important;
+                flex-wrap: wrap;
+                padding-bottom: 0 !important;
             }
             .robotic-gifs {
                 height: 45% !important;
