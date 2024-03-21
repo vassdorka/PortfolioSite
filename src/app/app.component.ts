@@ -53,7 +53,7 @@ export class AppComponent implements AfterViewInit {
       this.titleAnimateOut();
     }
     console.log("window:", window.pageYOffset)
-    console.log("section:", sectionTwo?.offsetTop - 200)
+    console.log("section:", sectionTwo?.offsetTop)
     if(window.pageYOffset > sectionTwo?.offsetTop - 200 && window.pageYOffset < sectionThree?.offsetTop - 200) {
       this.activeSite = 1;
       this.titleAnimateIn();
