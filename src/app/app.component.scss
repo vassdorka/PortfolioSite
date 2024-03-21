@@ -514,10 +514,10 @@
 
 @keyframes moveWave2 {
     0% {
-        transform:  translateZ(0) scaleY(0.2)
+        transform:  translateZ(0) scaleY(0.1)
     }
     50% {
-        transform:  translateZ(0) scaleY(1)
+        transform:  translateZ(0) scaleY(0.8)
     }
     100% {
         transform:  translateZ(0) scaleY(0.2)
