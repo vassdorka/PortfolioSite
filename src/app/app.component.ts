@@ -9,7 +9,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit {
-  title = 'portfolio-app';
   activeSite: number = 0;
   siteIndexes: string[] = [".main-container",".algomem-container",".todo-maker-container",".robotic-container",".about-container"]
 
