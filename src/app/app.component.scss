@@ -313,24 +313,30 @@
                 border-radius: 10px;
                 .robotic-title, .robotic-desc {
                     @include row;
-                    width: 12%;
+                    width: 14%;
                     align-items: flex-end;
                     text-transform: uppercase;
                     color: $secondary;
                     font-family: thirdFont;
                     font-size: 3.5rem;
-                    gap: 1rem;
+                }
+                .robotic-title {
+                    .name {
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                    }
                 }
                 .robotic-desc {
                     width: 12%;
                     font-size: 0.85rem;
                     text-transform: none;
                     padding-bottom: 1rem;
+                    margin-left: 1rem;
                 }
                 .robotic-gifs {
                     @include column;
                     @include center-center;
-                    width: 76%;
+                    width: 74%;
                     height: 100%;
                     margin-left: 1rem;
                     gap: 7.5%;
@@ -490,7 +496,12 @@
             }
         }
     }
+    .works-header {
+        padding-left: 2rem !important;
+        font-size: 5rem !important;
+    }
     .algomem-container {
+        align-items: center !important;
         .algomem-intro {
             width: 85% !important;
             height: 90% !important;
@@ -505,8 +516,8 @@
                     text-align: center !important;
                     margin-right: 0 !important;
                     .project-name {
-                        font-size: 1.75rem !important;
-                        margin-bottom: 1.5rem !important;
+                        font-size: 2rem !important;
+                        margin-bottom: 1.2rem !important;
                     }
                     width: 100% !important;
                 }
@@ -541,6 +552,136 @@
                         margin-right: 0 !important;
                     }
                 }
+            }
+        }
+    }
+    .todo-maker-container {
+        height: 90vh !important;
+        align-items: center !important;
+        .todo-maker {
+            margin-top: 3.5rem;
+            max-width: 85% !important;
+            height: 85% !important;
+            clip-path: 
+            polygon(0 0,
+            100% 0,
+            100% 100%,
+            0 100%) !important;
+            border-radius: 10px !important;
+            box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.25);
+            .todo-maker-gif {
+                top: 0 !important;
+                right: 0 !important;
+                border-radius: 5px !important;
+            }
+            .row {
+                flex-direction: column !important;
+                padding: 2rem 2rem 0 2rem !important;
+                height: 80% !important;
+                .todo-maker-title {
+                    width: 100% !important;
+                    font-size: 2.5rem !important;
+                    padding-top: 0 !important;
+                    height: 35%;
+                }
+                .todo-maker-desc {
+                    width: 100% !important;
+                    display: flex !important;
+                    justify-content: flex-end !important;
+                    text-align: end;
+                    margin-left: 0 !important;
+                    padding-top: 0.5rem !important;
+                    font-size: 0.75rem !important;
+                    height: 25%;
+                }
+                .todo-maker-2 {
+                    height: 40% !important;
+                    width: 100% !important;
+                    flex-direction: row;
+                    justify-content: center !important;
+                    align-items: center;
+                    gap: 0.5rem;
+                    .todo-maker-gif {
+                        height: 40% !important;
+                    }
+                }
+            }
+            .todo-maker-1 {
+                height: 20% !important;
+                width: 100% !important;
+                justify-content: center !important;
+                gap: 0.5rem;
+                .todo-maker-gif {
+                   width: 40% !important;
+                   height: 60% !important;
+                }
+            }
+        }
+    }
+    .robotic-container {
+        height: 90vh !important;
+        align-items: center !important;
+        .robotic {
+            width: 85% !important; 
+            height: 65% !important;
+            flex-direction: column !important;
+            background: linear-gradient($primary, $secondary) !important;
+            .robotic-title {
+                width: 100% !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                font-size: 3rem !important;
+                height: 30%;
+                padding: 0 1rem !important;
+                .name {
+                    writing-mode:horizontal-tb !important;
+                    text-orientation:sideways !important;
+                }
+            }
+            .robotic-desc {
+                width: 100% !important;
+                font-size: 0.75rem !important;
+                margin-left: 0 !important;
+                height: 25%;
+                padding: 0 1rem !important;
+            }
+            .robotic-gifs {
+                height: 45% !important;
+                width: 90% !important;
+                margin: 0 !important;
+                padding: 0 1rem !important;
+                .row {
+                    gap: 5% !important;
+                    height: 25% !important;
+                    justify-content: center !important;
+                    .robotic-gif {
+                        height:  unset !important;
+                        width: 100% !important;
+                        border-radius: 5px !important;
+                    }
+                }
+            }
+        }
+    }
+    .about-container {
+        padding-left: 0 !important;
+        justify-content: center;
+        width: 85% !important;
+        padding-left: 2rem !important;
+        .about-title {
+            p {
+                font-size: 5rem !important;
+            }
+        }
+        .about {
+            width: 100% !important;
+            font-size: 12px !important;
+            .contacts {
+                margin-top: 2rem;
+            }
+            .social-icon {
+                width: 36px !important;
+                height: 36px !important;
             }
         }
     }
