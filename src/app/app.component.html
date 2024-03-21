@@ -1,18 +1,18 @@
 <div class="app-container">
     <section class="main-container">
       <div class="sidebar">
-        @for (index of siteIndexes; track index) {
-          <div [class.active]="activeSite === index"></div>
+        @for (site of siteIndexes; track site; let idx = $index) {
+          <div [class.active]="activeSite === idx" onclick="scrollToSection(site)"></div>
         }
       </div>
       <div class="name-container">Vass<br>Dorot<br>tya</div>
       <div class="portfolio-container">Portfolio</div>
     </section>
     <section class="works-container">
+      <div class="works-header">
+        works
+      </div>
       <div class="algomem-container">
-        <div class="works-header">
-          works
-        </div>
         <div class="algomem-intro">
             <div class="row">
                 <div class="description">
@@ -35,7 +35,7 @@
         <div class="todo-maker">
           <div class="row">
             <div class="todo-maker-title">Todo<br> mak<br>er</div>
-            <div class="todo-maker-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac orci ac felis venenatis rhoncus ut at mauris. Nam porta risus metus, at varius arcu semper consectetur. In quis interdum arcu. Curabitur at purus non purus sodales dapibus. Sed sed diam mollis ante cursus mollis.</div>
+            <div class="todo-maker-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac orci ac felis venenatis rhoncus ut at mauris. Nam porta risus metus, at varius arcu semper consectetur. In quis interdum arcu. Curabitur at purus non purus.</div>
             <div class="todo-maker-2">
                 <div class="todo-maker-2-1 todo-maker-gif"></div>
                 <div class="todo-maker-2-2 todo-maker-gif"></div>
@@ -57,10 +57,14 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac orci ac felis venenatis rhoncus ut at mauris. Nam porta risus metus, at varius arcu semper consectetur. In quis interdum arcu. Curabitur at purus non purus sodales dapibus. Sed sed diam mollis ante cursus mollis.
           </div>
             <div class="robotic-gifs">
-              <div class="robotic-1 robotic-gif"></div>
-              <div class="robotic-2 robotic-gif"></div>
-              <div class="robotic-3 robotic-gif"></div>
-              <div class="robotic-4 robotic-gif"></div>
+              <div class="row">
+                <div class="robotic-1 robotic-gif"></div>
+                <div class="robotic-2 robotic-gif"></div>
+              </div>
+              <div class="row">              
+                <div class="robotic-3 robotic-gif"></div>
+                <div class="robotic-4 robotic-gif"></div>
+            </div>
             </div>
           </div>
       </div>

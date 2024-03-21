@@ -11,7 +11,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements AfterViewInit {
   title = 'portfolio-app';
   activeSite: number = 0;
-  siteIndexes: number[] = [0,1,2,3,4]
+  siteIndexes: string[] = [".main-container",".algomem-container",".todo-maker-container",".robotic-container",".about-container"]
 
   constructor() {}
 
@@ -40,24 +40,35 @@ export class AppComponent implements AfterViewInit {
   }
 
   keepTrack() {
-    let sectionOne: any = document.querySelector(".main-container");
-    let sectionTwo: any = document.querySelector(".algomem-container");
-    let sectionThree: any = document.querySelector(".todo-maker-container");
-    let sectionFour: any = document.querySelector(".robotic-container");
-    console.log(sectionOne?.offsetTop, sectionTwo?.offsetTop, sectionThree?.offsetTop, sectionFour?.offsetTop)
-    if(window.pageYOffset < sectionTwo?.offsetTop - 100) { 
+    let sectionOne: any = document.querySelector(this.siteIndexes[0]);
+    let sectionTwo: any = document.querySelector(this.siteIndexes[1]);
+    let sectionThree: any = document.querySelector(this.siteIndexes[2]);
+    let sectionFour: any = document.querySelector(this.siteIndexes[3]);
+    let sectionFive: any = document.querySelector(this.siteIndexes[4]);
+    if(window.pageYOffset < sectionTwo?.offsetTop - 150) { 
       this.activeSite = 0;
     }
     console.log(window.pageYOffset)
-    if(window.pageYOffset > sectionTwo?.offsetTop - 100 && window.pageYOffset < sectionThree?.offsetTop - 100) {
+    if(window.pageYOffset > sectionTwo?.offsetTop - 150 && window.pageYOffset < sectionThree?.offsetTop - 150) {
       this.activeSite = 1;
     }
-    if(window.pageYOffset > sectionThree?.offsetTop - 100 && window.pageYOffset < sectionFour?.offsetTop - 100) {
+    if(window.pageYOffset > sectionThree?.offsetTop - 150 && window.pageYOffset < sectionFour?.offsetTop - 150) {
       this.activeSite = 2;
     }
-    if(window.pageYOffset > sectionFour?.offsetTop - 100) {
+    if(window.pageYOffset > sectionFour?.offsetTop - 150 && window.pageYOffset < sectionFive?.offsetTop - 150) {
       this.activeSite = 3;
-      console.log("bingo")
     }
+    if(window.pageYOffset > sectionFive?.offsetTop - 150) {
+      this.activeSite = 4;
+    }
+  }
+
+  scrollToSection(siteName: string) {
+    let selectedSection: any = document.querySelector(siteName);
+    window.scrollTo({
+      top: selectedSection?.pageYOffset,
+      left: 0,
+      behavior: "smooth",
+    })
   }
 }
